@@ -1,5 +1,5 @@
 FROM ruby:2.3
-MAINTAINER Carlos Lopes <carlos.lopes@codeminer42.com>
+MAINTAINER rilian <rilian@railsreactor.com>
 
 # Install dependencies
 RUN apt-get update && \
@@ -32,7 +32,6 @@ RUN curl -sSLO "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANT
 # Install node / npm
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 6.2.2
-
 RUN curl -sSLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" && \
     tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 && \
     rm -f "node-v$NODE_VERSION-linux-x64.tar.xz" && \
