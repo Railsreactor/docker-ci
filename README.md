@@ -1,4 +1,4 @@
-# Railsreactor Ruby Image for CI builds
+# Rails Reactor Ruby Image for CI builds
 
 Docker Ruby images used by Gitlab CI.
 
@@ -13,11 +13,7 @@ The following dependencies are being installed on all images:
 
 ## Tags
 
-We currently have images for the following Rubies.
-
-### CRuby images
-
-- `2.3`, `latest` [Dockerfile](https://github.com/Codeminer42/docker-ci-ruby/blob/master/2.3/Dockerfile)
+We currently have images for the following Rubies: `2.3`
 
 ## Contributing
 
