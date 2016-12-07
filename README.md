@@ -1,19 +1,21 @@
 # Rails Reactor Ruby Image for CI builds
 
-Docker Ruby images used by Gitlab CI.
+Docker images used by Gitlab CI at RR
 
 ## Dependencies
 
-The following dependencies are being installed on all images:
-
-* Node.js v4.4.7 and npm
-* PhantomJS v1.9.8
-* Qt v5 and Xvbf (only on CRuby images)
 * TODO: update this list
 
-## Tags
+## Building
 
-We currently have images for the following Rubies: `2.3`
+Ruby example
+
+```
+cd ruby
+docker build -t railsreactor/docker-ci-ruby:latest -t railsreactor/docker-ci-ruby:1.0 .
+docker login --username=railsreactor
+docker push railsreactor/docker-ci-ruby
+```
 
 ## Contributing
 
