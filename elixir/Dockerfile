@@ -5,7 +5,9 @@ MAINTAINER rilian <rilian@railsreactor.com>
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       wget \
-      locales
+      locales \
+      openssh-client \
+      git
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
