@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM buildpack-deps:jessie
 
 MAINTAINER rilian <rilian@railsreactor.com>
 
