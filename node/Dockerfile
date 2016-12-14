@@ -7,20 +7,19 @@ MAINTAINER rilian <rilian@railsreactor.com>
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       git \
-      libfreetype6 \
-      libfontconfig \
-      bzip2 \
-      qt5-default \
-      libqt5webkit5-dev \
       gstreamer1.0-plugins-base \
       gstreamer1.0-tools \
       gstreamer1.0-x \
-      xvfb \
-      xauth \
-      unzip \
-      libnss3 \
       libgconf-2-4 \
-      openssh-client
+      libfontconfig \
+      libfreetype6 \
+      libnss3 \
+      libqt5webkit5-dev \
+      openssh-client \
+      qt5-default \
+      unzip \
+      xauth \
+      xvfb
 
 # Install Phantom.js
 ENV PHANTOMJS_VERSION 2.1.1
