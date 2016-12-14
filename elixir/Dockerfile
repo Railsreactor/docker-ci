@@ -19,3 +19,6 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       elixir \
       esl-erlang
+
+# Cleanup
+RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/*

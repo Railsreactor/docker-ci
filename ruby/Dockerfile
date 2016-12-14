@@ -1,4 +1,5 @@
 FROM ruby:2.3
+
 MAINTAINER rilian <rilian@railsreactor.com>
 
 # Install dependencies
@@ -53,4 +54,6 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && apt-get -qqy install \
     ${CHROME_VERSION:-google-chrome-stable} \
   && rm /etc/apt/sources.list.d/google-chrome.list \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+
+# Cleanup
+RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/*
