@@ -2,6 +2,8 @@
 
 Docker images used by Gitlab CI at RR
 
+Get latest images here [https://hub.docker.com/u/railsreactor/](https://hub.docker.com/u/railsreactor/)
+
 ## Dependencies
 
 * TODO: update this list
