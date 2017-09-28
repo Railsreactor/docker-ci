@@ -2,7 +2,6 @@ FROM buildpack-deps:jessie
 
 MAINTAINER rilian <rilian@railsreactor.com>
 
-ENV PHANTOMJS_VERSION 2.1.1
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 6.2.2
 ARG CHROME_VERSION="google-chrome-stable"
@@ -27,14 +26,6 @@ RUN CHROMEDRIVER_VERSION=$(wget -qO- http://chromedriver.storage.googleapis.com/
       unzip \
       xauth \
       xvfb \
-
-    # phantomjs
-    && mkdir -p /srv/var \
-    && curl -sSLO "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2" && \
-    tar -xjf "phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2" -C "/tmp" && \
-    rm -f "phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2" && \
-    mv "/tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/" /srv/var/phantomjs && \
-    ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs \
 
     # node / npm
     && curl -sSLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" && \
