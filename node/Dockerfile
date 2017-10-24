@@ -3,7 +3,7 @@ FROM buildpack-deps:jessie
 MAINTAINER rilian <rilian@railsreactor.com>
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 6.2.2
+ENV NODE_VERSION 8.6.0
 ARG CHROME_VERSION="google-chrome-stable"
 
 RUN CHROMEDRIVER_VERSION=$(wget -qO- http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && \
