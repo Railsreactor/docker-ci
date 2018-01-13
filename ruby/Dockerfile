@@ -13,11 +13,13 @@ RUN CHROMEDRIVER_VERSION=$(wget -qO- http://chromedriver.storage.googleapis.com/
     && apt-get update && \
     apt-get install -y --no-install-recommends \
       cmake \
+      ghostscript \
       git \
       google-chrome-stable \
       gstreamer1.0-plugins-base \
       gstreamer1.0-tools \
       gstreamer1.0-x \
+      imagemagick \
       libgconf-2-4 \
       libfontconfig \
       libfreetype6 \
