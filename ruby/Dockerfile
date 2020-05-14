@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.6
 
 MAINTAINER rilian <rilian@railsreactor.com>
 
